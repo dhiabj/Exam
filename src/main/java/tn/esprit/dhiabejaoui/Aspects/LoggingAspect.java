@@ -21,7 +21,7 @@ public class LoggingAspect {
 //		log.info("Début Exécution :" + name );
 //	}
 
-    @After("execution(* tn.esprit.dhiabejaoui.controllers.*.get*(..))")
+    @After("execution(void tn.esprit.dhiabejaoui.controllers.*(..))")
     public void apres(JoinPoint thisJoinPoint) {
         log.info("Out of the method (After)" + thisJoinPoint.getSignature().getName());
     }
